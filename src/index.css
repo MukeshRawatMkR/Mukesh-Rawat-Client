@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Black & White Theme */
+
+@layer base {
+  :root {
+    /* Core Colors - Black & White Theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+
+    /* Primary - Pure Black */
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 0 0% 20%;
+    --primary-dark: 0 0% 0%;
+
+    /* Secondary - Light Gray */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+
+    /* Accent - Dark Gray */
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+    --accent-light: 0 0% 25%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 0 0% 9%;
+
+    /* Portfolio Specific Colors */
+    --hero-bg: 0 0% 4%;
+    --section-bg: 0 0% 98%;
+    --skill-bg: 0 0% 9%;
+    --skill-hover: 0 0% 15%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 9%) 0%, hsl(0 0% 4%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(0 0% 15%) 0%, hsl(0 0% 25%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 9% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 9% / 0.1), 0 2px 4px -1px hsl(0 0% 9% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 9% / 0.1), 0 4px 6px -2px hsl(0 0% 9% / 0.05);
+    --shadow-glow: 0 0 40px hsl(0 0% 9% / 0.15);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 9%;
+    --sidebar-primary: 0 0% 9%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border: 0 0% 89%;
+    --sidebar-ring: 0 0% 9%;
+  }
+
+  .dark {
+    /* Dark Mode - Inverted Black & White */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary - White in dark mode */
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --primary-light: 0 0% 85%;
+    --primary-dark: 0 0% 100%;
+
+    /* Secondary - Dark Gray */
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Accent - Light Gray */
+    --accent: 0 0% 85%;
+    --accent-foreground: 0 0% 9%;
+    --accent-light: 0 0% 75%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 98%;
+
+    /* Portfolio Specific Colors - Dark Mode */
+    --hero-bg: 0 0% 2%;
+    --section-bg: 0 0% 6%;
+    --skill-bg: 0 0% 98%;
+    --skill-hover: 0 0% 85%;
+
+    /* Gradients - Dark Mode */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(0 0% 85%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(0 0% 85%) 0%, hsl(0 0% 75%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 4%) 0%, hsl(0 0% 6%) 100%);
+
+    /* Shadows - Dark Mode */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(0 0% 98% / 0.15);
+
+    --sidebar-background: 0 0% 9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 9%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground scroll-smooth;
+  }
+
+  /* Typography */
+  h1 { @apply text-4xl md:text-6xl font-bold tracking-tight; }
+  h2 { @apply text-3xl md:text-5xl font-bold tracking-tight; }
+  h3 { @apply text-2xl md:text-3xl font-semibold; }
+  h4 { @apply text-xl md:text-2xl font-semibold; }
+}
+
+@layer components {
+  /* Hero Section */
+  .hero-section {
+    background: var(--gradient-hero);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Section Styles */
+  .section-container {
+    @apply py-20 px-4 md:px-8;
+  }
+
+  .section-title {
+    @apply text-center mb-16;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Card Styles */
+  .portfolio-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-md);
+    @apply rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .skill-card {
+    background: hsl(var(--skill-bg));
+    @apply rounded-lg p-4 text-primary-foreground transition-all duration-300 hover:scale-105;
+  }
+
+  .skill-card:hover {
+    background: hsl(var(--skill-hover));
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Button Variants */
+  .btn-hero {
+    background: var(--gradient-accent);
+    @apply text-primary-foreground border-0 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-outline-hero {
+    @apply border-2 border-primary-foreground text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-primary-foreground hover:text-primary;
+  }
+
+  /* Contact Form */
+  .contact-input {
+    @apply w-full p-4 border border-border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300;
+  }
+
+  /* Navbar */
+  .navbar-link {
+    @apply relative px-4 py-2 transition-colors duration-300 hover:text-primary;
+  }
+
+  .navbar-link.active {
+    @apply text-primary;
+  }
+
+  .navbar-link::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 -translate-x-1/2;
+  }
+
+  .navbar-link.active::after,
+  .navbar-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Animations */
+  .fade-in {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
+  }
+
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .slide-in-left {
+    @apply opacity-0 -translate-x-8 transition-all duration-700;
+  }
+
+  .slide-in-left.visible {
+    @apply opacity-100 translate-x-0;
+  }
+
+  .slide-in-right {
+    @apply opacity-0 translate-x-8 transition-all duration-700;
+  }
+
+  .slide-in-right.visible {
+    @apply opacity-100 translate-x-0;
+  }
+
+  /* Text Cycling Animation */
+  .animate-fade-in-up {
+    animation: fadeInRight 0.5s ease-out;
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
