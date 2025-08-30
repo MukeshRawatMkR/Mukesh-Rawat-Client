@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Mail, Menu, User, X, FolderKanban, Home, BookOpen } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle.jsx";
 import profilePhoto from '@/assets/profile-photo.png';
+import BlogComingSoon from "../pages/BlogComingSoon.jsx";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +48,7 @@ const Navbar = () => {
   ];
 
   // CMS/Blog link - currently points to coming soon page
-  const blogUrl = "/blog"; // Will be updated to actual blog URL when hosted
+  const blogUrl = BlogComingSoon; // Will be updated to actual blog URL when hosted, To-Do
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
