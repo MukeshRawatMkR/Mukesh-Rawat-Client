@@ -112,12 +112,11 @@ const About = () => {
       name: 'Frontend Development', 
       description: 'React, Tailwind CSS, Vite',
       technologies: [
-        { name: 'React', rating: 9 },
-        { name: 'JavaScript', rating: 9 },
-        { name: 'TypeScript', rating: 8 },
-        { name: 'Tailwind CSS', rating: 9 },
         { name: 'HTML5', rating: 10 },
         { name: 'CSS3', rating: 9 },
+        { name: 'JavaScript', rating: 9 },
+        { name: 'React', rating: 9 },
+        { name: 'Tailwind CSS', rating: 9 },
         { name: 'Vite', rating: 8 }
       ]
     },
@@ -140,8 +139,8 @@ const About = () => {
       technologies: [
         { name: 'MySQL', rating: 8 },
         { name: 'MongoDB', rating: 7 },
-        { name: 'Supabase', rating: 8 },
-        { name: 'PostgreSQL', rating: 7 },
+        // { name: 'Supabase', rating: 8 },
+        // { name: 'PostgreSQL', rating: 7 },
         { name: 'Database Design', rating: 8 }
       ]
     },
@@ -154,7 +153,8 @@ const About = () => {
         { name: 'CSS3', rating: 9 },
         { name: 'JavaScript ES6+', rating: 9 },
         { name: 'DOM Manipulation', rating: 9 },
-        { name: 'Web APIs', rating: 8 }
+        { name: 'Web APIs', rating: 8 },
+        { name: 'Async Operations', rating: 8 }
       ]
     },
     { 

@@ -10,11 +10,11 @@ const Hero = () => {
 
   const titles = [
     'Full-Stack Developer',
-    'Backend Developer', 
-    'MERN Developer',
-    'Frontend Developer',
+    'MERN Stack Developer', 
     'React Developer',
-    'Node.js Developer'
+    'Node.js Developer',
+    'Tech Enthusiast',
+    'Lifelong Learner'
   ];
 
   useEffect(() => {
@@ -126,7 +126,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-5 left-1/1.1 transform -translate-x-1/2 animate-bounce">
         <ChevronDown className="text-primary-foreground/60" size={32} />
       </div>
     </section>
