@@ -40,52 +40,21 @@ const Projects = () => {
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio website showcasing projects and skills with smooth animations and optimized performance.',
       image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
-      techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+      techStack: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite', 'Responsive Design', 'Dark Mode'],
       githubUrl: 'https://github.com/MukeshRawatMkR/Mukesh-Rawat-Client',
       liveDemoUrl: 'https://mukeshrawat.vercel.app',
       date: '2025-08-29'
     },
-
-    {
+{
       id: 3,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-      techStack: ['React', 'TypeScript', 'Supabase', 'Framer Motion'],
-      githubUrl: 'https://github.com/alexjohnson/task-manager',
-      liveDemoUrl: 'https://taskmanager-demo.vercel.app',
-      date: '2023-11-20'
-    },
-    {
-      id: 4,
-      title: 'Weather Dashboard',
-      description: 'A responsive weather application with location-based forecasts, interactive maps, and detailed weather analytics.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
-      techStack: ['React', 'OpenWeather API', 'Chart.js', 'CSS Modules'],
-      githubUrl: 'https://github.com/alexjohnson/weather-dashboard',
-      liveDemoUrl: 'https://weather-dashboard-demo.vercel.app',
-      date: '2023-09-10'
-    },
-    {
-      id: 5,
-      title: 'Social Media Analytics',
-      description: 'A comprehensive analytics dashboard for social media metrics with data visualization and performance tracking.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      techStack: ['Vue.js', 'Express.js', 'PostgreSQL', 'D3.js'],
-      githubUrl: 'https://github.com/alexjohnson/social-analytics',
-      liveDemoUrl: 'https://social-analytics-demo.vercel.app',
-      date: '2023-07-05'
-    },    {
-      id: 6,
       title: 'Recipe Finder App',
       description: 'A recipe discovery application with ingredient-based search, nutritional information, and meal planning features.',
       image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop',
       techStack: ['React Native', 'Firebase', 'Spoonacular API', 'Expo'],
-      githubUrl: 'https://github.com/alexjohnson/recipe-finder',
+      // githubUrl: 'https://github.com/alexjohnson/recipe-finder',
       liveDemoUrl: 'https://recipe-finder-demo.vercel.app',
       date: '2023-03-20'
-    }
-  ];
+    },  ];
 
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('en-US', {
