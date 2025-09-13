@@ -112,7 +112,7 @@ const Contact = () => {
       icon: MapPin,
       label: 'Location',
       value: 'Kotdwara, Uttarakhand',
-      link: 'https://maps.google.com/?q=San+Francisco,CA'//todo
+      link: ''//todo
     },
     {
       icon: Phone,
@@ -138,7 +138,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      url: 'https://linkedin.com/in/mukeshrawat',
+      url: 'https://www.linkedin.com/in/mukesh-rawat-5375a8227/',
       color: 'hover:text-blue-600'
     },
     {
