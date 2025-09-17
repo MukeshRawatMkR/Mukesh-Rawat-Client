@@ -56,24 +56,24 @@ const BlogComingSoon = () => {
           <div className="max-w-2xl mx-auto mb-12">
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               I'm currently crafting a beautiful blog experience where I'll share insights about 
-              web development, coding tutorials, tech trends, and my journey as a developer.
+              web development, tech trends, and my journey as a developer.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="portfolio-card text-center p-6">
                 <BookOpen className="w-8 h-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">Tech Articles</h3>
-                <p className="text-sm text-muted-foreground">In-depth tutorials and coding insights</p>
+                <p className="text-sm text-muted-foreground">Articles & References</p>
               </div>
               <div className="portfolio-card text-center p-6">
                 <Bell className="w-8 h-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">Project Updates</h3>
-                <p className="text-sm text-muted-foreground">Behind-the-scenes of my latest projects</p>
+                <p className="text-sm text-muted-foreground">Behind-the-scenes of my projects</p>
               </div>
               <div className="portfolio-card text-center p-6">
                 <Mail className="w-8 h-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">Industry Tips</h3>
-                <p className="text-sm text-muted-foreground">Best practices and career advice</p>
+                <p className="text-sm text-muted-foreground">Best practices and new learnings</p>
               </div>
             </div>
 
