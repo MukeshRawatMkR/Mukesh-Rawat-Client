@@ -48,7 +48,7 @@ const Navbar = () => {
   ];
 
   // CMS/Blog link - currently points to coming soon page
-  const blogUrl = "/blog"; // Will be updated to actual blog URL when hosted, to-do
+  const blogUrl = "https://devshare-pi.vercel.app/"; 
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
@@ -90,12 +90,13 @@ const Navbar = () => {
               {/* Blog/CMS Link */}
               <a
                 href={blogUrl}
+                target="_blank" rel="noopener noreferrer"
                 className="navbar-link flex items-center gap-2 hover:text-primary transition-colors relative"
                 data-testid="link-blog"
               >
                 <BookOpen size={18} />
                 Blog
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-1.5 py-0.5 rounded-full font-medium">Soon</span>
+                {/* <span className="text-xs bg-yellow-500 text-yellow-900 px-1.5 py-0.5 rounded-full font-medium">Soon</span> */}
               </a>
               {navItems.slice(3).map((item) => {
                 const Icon = item.icon;
