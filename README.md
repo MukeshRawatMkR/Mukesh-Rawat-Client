@@ -13,6 +13,32 @@ This is a modern portfolio website built with React and Vite. It features a clea
 
 The API validates request data, limits JSON payload size, applies security headers, and rate-limits submissions. Set `DATABASE_URL` only in environment variables; never commit database credentials.
 
+## Contact email notifications (Gmail)
+
+The contact API saves each message in Neon and sends an email notification through Gmail SMTP. The notification is sent to `CONTACT_EMAIL`, and the visitor's address is set as the reply-to address. This setup does not require a custom domain.
+
+1. In your Google Account, enable **2-Step Verification**.
+2. Open [Google App Passwords](https://myaccount.google.com/apppasswords) and create an app password for the contact form. Google only shows this password once; it is different from your normal Google password.
+3. Add these values to your local `.env` file:
+
+   ```env
+   GMAIL_USER=your-gmail-address@gmail.com
+   GMAIL_APP_PASSWORD=your-16-character-app-password
+   CONTACT_EMAIL=your-inbox@example.com
+   ```
+
+   `GMAIL_USER` is the Gmail account that sends the notification. `CONTACT_EMAIL` is the inbox that receives it; these can be the same address. Remove any spaces from the app password when entering it.
+4. In Vercel, add the same three variables under **Project Settings → Environment Variables**, then redeploy.
+5. Submit a test message and check the `CONTACT_EMAIL` inbox (including spam).
+
+Keep `GMAIL_APP_PASSWORD` in server environment variables only; do not add it to frontend code or commit it. If email delivery fails after the message is saved, the form will say so and will not ask the visitor to submit the message again. Some Google Workspace accounts or accounts with extra security restrictions may not allow app passwords.
+
+## About-me portfolio chat
+
+The responsive chat assistant uses curated, keyword-matched answers based on the portfolio. It needs no API key, paid service, or chat backend. Messages stay in the page's temporary state and are not sent to an external AI service or saved by the site.
+
+To add facts or common questions, update `src/lib/about-assistant.js`. The assistant avoids guessing details that are not listed on the portfolio.
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
