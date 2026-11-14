@@ -33,6 +33,12 @@ The contact API saves each message in Neon and sends an email notification throu
 
 Keep `GMAIL_APP_PASSWORD` in server environment variables only; do not add it to frontend code or commit it. If email delivery fails after the message is saved, the form will say so and will not ask the visitor to submit the message again. Some Google Workspace accounts or accounts with extra security restrictions may not allow app passwords.
 
+## About-me portfolio chat
+
+The responsive chat assistant uses curated, keyword-matched answers based on the portfolio. It needs no API key, paid service, or chat backend. Messages stay in the page's temporary state and are not sent to an external AI service or saved by the site.
+
+To add facts or common questions, update `src/lib/about-assistant.js`. The assistant avoids guessing details that are not listed on the portfolio.
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.

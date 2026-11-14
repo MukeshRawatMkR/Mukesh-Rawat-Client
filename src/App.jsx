@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider.jsx";
 import Index from "./pages/Index.jsx";
 import AIEngineering from "./pages/AIEngineering.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import AboutChat from "./components/AboutChat.jsx";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <AboutChat />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/ai-engineering" element={<AIEngineering />} />

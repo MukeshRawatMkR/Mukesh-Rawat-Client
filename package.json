@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "concurrently -k -n api,web \"node server/index.js\" \"vite\"",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
