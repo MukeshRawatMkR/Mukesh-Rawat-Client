@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Mail, Menu, User, X, FolderKanban, Home, BookOpen } from "lucide-react";
+import { Mail, Menu, User, X, FolderKanban, Home, Sparkles } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle.jsx";
 import profilePhoto from '@/assets/profile-photo.png';
+import { Link } from "react-router-dom";
 // import BlogComingSoon from "../pages/BlogComingSoon.jsx";
 
 const Navbar = () => {
@@ -47,9 +48,6 @@ const Navbar = () => {
     { id: "contact", label: "Contact", icon: Mail },
   ];
 
-  // CMS/Blog link - currently points to coming soon page
-  const blogUrl = "https://devshare-pi.vercel.app/"; 
-
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,17 +85,15 @@ const Navbar = () => {
                   </button>
                 );
               })}
-              {/* Blog/CMS Link */}
-              <a
-                href={blogUrl}
-                target="_blank" rel="noopener noreferrer"
+              {/* AI Engineering progress/blog link */}
+              <Link
+                to="/ai-engineering"
                 className="navbar-link flex items-center gap-2 hover:text-primary transition-colors relative"
-                data-testid="link-blog"
+                data-testid="link-ai-engineering"
               >
-                <BookOpen size={18} />
-                Blog
-                {/* <span className="text-xs bg-yellow-500 text-yellow-900 px-1.5 py-0.5 rounded-full font-medium">Soon</span> */}
-              </a>
+                <Sparkles size={18} />
+                AI Engineering
+              </Link>
               {navItems.slice(3).map((item) => {
                 const Icon = item.icon;
                 return (
@@ -151,16 +147,16 @@ const Navbar = () => {
                 </button>
               );
             })}
-            {/* Mobile Blog/CMS Link */}
-            <a
-              href={blogUrl}
+            {/* Mobile AI Engineering progress/blog link */}
+            <Link
+              to="/ai-engineering"
+              onClick={() => setIsOpen(false)}
               className="flex items-center gap-2 px-3 py-2 text-base font-medium w-full text-left text-foreground hover:text-primary transition-colors"
-              data-testid="link-blog-mobile"
+              data-testid="link-ai-engineering-mobile"
             >
-              <BookOpen size={18} />
-              Blog
-              <span className="text-xs bg-yellow-500 text-yellow-900 px-1.5 py-0.5 rounded-full font-medium ml-auto">Soon</span>
-            </a>
+              <Sparkles size={18} />
+              AI Engineering
+            </Link>
             {navItems.slice(3).map((item) => {
               const Icon = item.icon;
               return (
