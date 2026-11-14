@@ -86,8 +86,16 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call (replace with actual API endpoint)
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Unable to send your message.');
+      }
       
       toast({
         title: "Message sent successfully!",
@@ -97,9 +105,12 @@ const Contact = () => {
       // Reset form
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('Failed to submit contact form:', error);
       toast({
         title: "Error sending message",
-        description: "Please try again later or contact me directly.",
+        description: error instanceof Error && error.message !== 'Failed to fetch'
+          ? error.message
+          : "Please try again later or contact me directly.",
         variant: "destructive",
       });
     } finally {
