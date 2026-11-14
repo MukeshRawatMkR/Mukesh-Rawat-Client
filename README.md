@@ -2,7 +2,16 @@
 
 ## Overview
 
-This is a modern, frontend-only portfolio website built with React and TypeScript. The application features a clean, minimalist design with a black and white theme, showcasing personal projects, skills, and contact information. The website includes smooth animations, responsive design, and a comprehensive component library using shadcn/ui.
+This is a modern portfolio website built with React and Vite. It features a clean, minimalist design with a black and white theme, showcasing personal projects, skills, and contact information. The contact form uses a Node.js/Express API and Neon PostgreSQL to store submissions.
+
+## Contact API setup
+
+1. Create a Neon PostgreSQL database and set `DATABASE_URL` in your local `.env` file (copy `.env.example`).
+2. Run the SQL in `db/migrations/0001_create_contact_messages.sql` against that database.
+3. Run `npm run dev` to start the Express API and Vite frontend together. The Vite development server proxies `/api` requests to the API.
+4. For Vercel, add `DATABASE_URL` to the project's environment variables and deploy. The API is available at `POST /api/contact`; submissions are stored in the `contact_messages` table.
+
+The API validates request data, limits JSON payload size, applies security headers, and rate-limits submissions. Set `DATABASE_URL` only in environment variables; never commit database credentials.
 
 ## User Preferences
 
@@ -11,7 +20,7 @@ Preferred communication style: Simple, everyday language.
 ## System Architecture
 
 ### Frontend Architecture
-- **Framework**: React 18 with TypeScript for type safety and modern development
+- **Framework**: React 18 with JavaScript for modern development
 - **Styling**: Tailwind CSS with a custom design system featuring black and white theming
 - **Component Library**: shadcn/ui components built on Radix UI primitives for accessibility
 - **State Management**: React hooks for local component state
@@ -27,9 +36,9 @@ Preferred communication style: Simple, everyday language.
 - **Animations**: Smooth scroll behavior and intersection observer-based animations
 
 ### Project Structure
-- **Frontend Only**: Pure React/TypeScript frontend application
+- **Project Structure**: React frontend with an Express contact API
 - **Path Aliases**: Configured aliases for clean imports (@/, @assets/)
-- **Type Safety**: TypeScript for component and prop type safety
+- **API Validation**: Zod validates contact submissions on the server
 - **Development Workflow**: Vite development server with hot module replacement
 
 ## External Dependencies

@@ -25,6 +25,9 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: 5000,
+    proxy: {
+      "/api": "http://localhost:3001",
+    },
   },
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
