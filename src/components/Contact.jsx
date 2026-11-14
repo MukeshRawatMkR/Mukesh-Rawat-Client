@@ -94,11 +94,21 @@ const Contact = () => {
       const result = await response.json();
 
       if (!response.ok) {
+        if (result.saved) {
+          setFormData({ name: '', email: '', message: '' });
+          toast({
+            title: "Message saved, but email notification failed",
+            description: result.error,
+            variant: "destructive",
+          });
+          return;
+        }
+
         throw new Error(result.error || 'Unable to send your message.');
       }
       
       toast({
-        title: "Message sent successfully!",
+        title: "Message received!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
       
